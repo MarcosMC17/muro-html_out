@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=EntradaEvento
+comment1.params=autor\ mensaje
+comment1.target=EntradaEvento(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ EntradaEvento\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=void\ mostrarPorPantalla()
+numComments=4
