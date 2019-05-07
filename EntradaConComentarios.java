@@ -21,16 +21,16 @@ public class EntradaConComentarios extends Entrada
         String textoComentarios = "";
         if(comentarios.size() > 0){
             for(String comentarioActual : comentarios){
-                textoComentarios += comentarioActual + "\n";
+                textoComentarios += "<div class=\"comentario\">" + "<p>" + comentarioActual + "</p>" + "</div>";
             }
         }
         else{
-            textoComentarios += "No hay comentarios";
+            textoComentarios += "<div class=\"comentario\">" + "<p>" + "No hay comentarios" + "</p>" + "</div>" ;
         }           
         return textoComentarios;
     }
 
     public String toString (){
-        return super.toString() + getTextoComentarios();
+        return super.toString() + "<div class=\"elemento\">" + "<p>" + getTextoComentarios() + "</p>" + "</div>";
     }
 }

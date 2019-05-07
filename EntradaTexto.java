@@ -17,7 +17,7 @@ public class EntradaTexto extends EntradaConComentarios {
 	
 	
 	public String toString (){
-		return super.toString() + "Mensaje: "+ mensaje + "\n";
+		return super.toString() + "<div class=\"elemento\">" + "<p>" + "Mensaje: " + mensaje + "\n" + "</p>" + "</div>";
 	}
 	
 	public void mostrarPorPantalla() {

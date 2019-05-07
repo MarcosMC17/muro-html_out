@@ -33,7 +33,7 @@ public class Muro
     public void mostrarMuroEnNavegador(){
         String info = "";
         for (Entrada entrada : entradas){
-            info +="<div class=\"linea\">" + "<div class=\"r\">" + "<div class=\"elemento\">" + "<p>" + "Usuario : " + entrada.getUsuario() + "</p>" + "</div>" + "<div class=\"elemento\">" + "<p>" + entrada.getTiempoPasadoDesdeLaPublicacion() + "</p>" + "</div>" + "<div class=\"elemento\">" + "<p>" + "Likes : " + entrada.getCantidadMeGusta() + "</p>" + "</div>" + "<div class=\"elemento\">" + "<p>" + "Usuario : " + entrada.getUsuario() + "</p>" + "</div>" +"</div>" + "</div>";
+            info += "<div class=\"fila\">" + entrada + "</div>";
         }
 
         try  

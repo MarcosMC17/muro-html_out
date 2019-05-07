@@ -25,9 +25,9 @@ public class Entrada
 
     public String toString (){
         String textoADevolver = "";
-        textoADevolver = "Usuario: " + getUsuario() + "\n";
-        textoADevolver += getTiempoPasadoDesdeLaPublicacion() + "\n";
-        textoADevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        textoADevolver = "<div class=\"elemento\">" + "<p>" + "Usuario: " + getUsuario() + "</p>" + "</div>";
+        textoADevolver +="<div class=\"elemento\">" + "<p>" + getTiempoPasadoDesdeLaPublicacion() + "</p>" + "</div>";
+        textoADevolver +="<div class=\"elemento\">" + "<p>" + "Likes: " + getCantidadMeGusta() + "</p>" + "</div>";
         System.out.println(textoADevolver);
         return textoADevolver;
     }
