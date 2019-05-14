@@ -1,0 +1,84 @@
+*{
+	font-family:"Calibri";
+}
+
+.header {
+	padding: 10px;
+	text-align: left;
+	background: #38A1F3;
+	color: white;
+	font-size: 20px;
+
+}
+
+.header, h1{
+	float: rigtht;
+	font-family: "Century Gothic";
+	padding-left : 20px;
+	
+}
+
+.logo{
+	width: 100px;
+	float: left;
+	padding-right: 20px;
+}
+
+.fila{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left:25%;
+	width:50%;
+	text-align:center;
+	border: 2px solid #38A1F3;
+	overflow: hidden;
+	border-radius: 15px;
+	position: relative;
+}
+
+.fperfil {
+	height: 50px;
+}
+
+.foto{
+	width: 450px;
+	margin-top: 50px;
+}
+
+.divFPerfil{
+	float:top;
+	float:left;
+}
+
+.divUsuario{
+	float:top;
+	float:left;
+	margin-left:20px;
+}
+
+.divTiempo{
+	float:top;
+	float:right;
+	width: 200 px;
+	}
+
+.divMensaje{
+	float:left;
+	margin-right: 400px;
+}
+
+.divLikes{
+	margin-left: 20px;
+	float:left;
+	margin-right: 20px;
+}
+
+.divComentario{
+	margin-left:20px;
+	position: relative;
+	bottom:0;
+	text-align:left;
+	
+}
+
+

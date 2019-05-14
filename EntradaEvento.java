@@ -13,7 +13,7 @@ public class EntradaEvento extends Entrada
     }
 
     public String toString (){
-        return super.toString() +"<div class=\"elemento\">" + "<p>" + "Evento: "+ mensajeEvento + "</p>" + "</div>";
+        return super.toString() +"<div class=\"divEvento\">" + "<p>" + "Evento: "+ mensajeEvento + "</p>" + "</div>";
     }    
 
     public void mostrarPorPantalla() {

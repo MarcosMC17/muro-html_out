@@ -8,11 +8,13 @@ public class Entrada
     private String usuario;
     private LocalDateTime momentoPublicacion;
     private int cantidadMeGusta;
+    private int fotoPerfil;
 
     public Entrada(String autor){
         usuario = autor;
         momentoPublicacion = LocalDateTime.now();
         cantidadMeGusta = 0; 
+        fotoPerfil = 0;
     }
 
     public LocalDateTime getMomentoPublicacion(){
@@ -23,12 +25,17 @@ public class Entrada
         cantidadMeGusta++;
     }
 
-    public String toString (){
+    public String toString(){
+        return "";
+    }
+    
+    public String toHTML(){
         String textoADevolver = "";
-        textoADevolver = "<div class=\"elemento\">" + "<p>" + "Usuario: " + getUsuario() + "</p>" + "</div>";
-        textoADevolver +="<div class=\"elemento\">" + "<p>" + getTiempoPasadoDesdeLaPublicacion() + "</p>" + "</div>";
-        textoADevolver +="<div class=\"elemento\">" + "<p>" + "Likes: " + getCantidadMeGusta() + "</p>" + "</div>";
-        System.out.println(textoADevolver);
+        textoADevolver =  "<div class=\"divFperfil\">" + "<img class=\"fperfil\"src=\"img/"+ fotoPerfil + ".png\"/> </div>";
+        textoADevolver += "<div class=\"divUsuario\">" + "<p>" + "Usuario: " + getUsuario() + "</p>" + "</div>";
+        textoADevolver += "<div class=\"divTiempo\">" + "<p>" + getTiempoPasadoDesdeLaPublicacion() + "</p>" + "</div>";
+        textoADevolver += "<div class=\"divLikes\">" + "<p>" + "Likes: " + getCantidadMeGusta() + "</p>" + "</div>";
+        textoADevolver += toString();
         return textoADevolver;
     }
 
@@ -55,6 +62,14 @@ public class Entrada
 
     public String getUsuario() {
         return usuario;
+    }
+    
+    public void setFoto(int nuevaFoto){
+        fotoPerfil = nuevaFoto;
+    }
+    
+    public int getFoto(){
+        return fotoPerfil;
     }
 
     public int getCantidadMeGusta() {

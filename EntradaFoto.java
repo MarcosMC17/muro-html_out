@@ -22,7 +22,7 @@ public class EntradaFoto extends EntradaConComentarios {
     }
 
     public String toString (){
-        return super.toString() + "<div class=\"elemento\">" + "<p>" + "Imagen: "+ urlImagen + "</p>" + "</div>" + "<div class=\"elemento\">" + "<p>" + "Titulo: " + titulo + "</p>" + "</div>" ;
+        return "<div class=\"divFoto\">" + "<img class=\"foto\"src=\""+ urlImagen + "\"/>" + "</div>" + "<div class=\"divPieFoto\">" + "<p>" + "Titulo: " + titulo + "</p>" + "</div>" + super.toString();
     }
 
     public void mostrarPorPantalla() {

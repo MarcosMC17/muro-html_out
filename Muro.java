@@ -9,16 +9,22 @@ public class Muro
     // instance variables - replace the example below with your own
     private ArrayList <Entrada> entradas;
     Path rutaArchivo = Paths.get("./html/index.html");
+    private int contadorFoto; 
 
     public Muro()
     {
         entradas = new ArrayList <Entrada> ();
+        contadorFoto = 1;
     }
 
     public void addEntrada (Entrada entrada)
     {
+        entrada.setFoto(contadorFoto);
         entradas.add(entrada);
-
+        contadorFoto++;
+        if(contadorFoto>20){
+            contadorFoto=1;
+        }
     }
 
     public String toString()
@@ -33,7 +39,7 @@ public class Muro
     public void mostrarMuroEnNavegador(){
         String info = "";
         for (Entrada entrada : entradas){
-            info += "<div class=\"fila\">" + entrada + "</div>";
+            info += "<div class=\"fila\">" + entrada.toHTML() + "</div>";
         }
 
         try  
@@ -41,14 +47,18 @@ public class Muro
             BufferedWriter archivo = Files.newBufferedWriter(rutaArchivo);
             archivo.write(
                 "<html>"+
-                "<head>" + 
+                "<head>" +
+                    "<link rel=\"stylesheet\" href=\"estilos.css\">"+
+                    "<meta charset=\"UTF-8\">" + 
+                    "<div class=\"header\">"+
+                        "<img class=\"logo\" src=\"logo.png\"/>"+
+                        "<h1>Twotter</h1>"+
+                    "</div>"+
                 "</head>" +
-                "<body>" +
-                "<img src=\"./html/img/logo.png\"/>" +
-                "<p>Twotter</p>" +             
-                "<div class=\"tabla\">" +
-                info +
-                "</div>"+
+                "<body>" +          
+                    "<div class=\"tabla\">" +
+                        info +
+                    "</div>"+
                 "</body>" +
                 "</html>"
             );
